@@ -9,6 +9,8 @@
 - Fase 2: validada con Claude Code real en una carpeta de prueba, no dentro de un proyecto real.
 - Revisión del 2 nov 2026: lint, typecheck, los 115 tests y el build pasan. No cubrió la comparación visual con `docs/DESIGN.md`, la instalación en un celular ni el MCP en una sesión real.
 - La carpeta del repo no tenía `.env` ni `local.db` en esa revisión, así que aquí no hay datos de uso real.
+- Publicado el 2 nov 2026 como repo público en https://github.com/jhondev1997/topobreza4 (MIT). El repo se borró y se volvió a crear con un solo commit limpio, así que los commits antiguos ya no existen en GitHub.
+- Siguiente propuesto: el error 3 de "Listo para hacer" (`pnpm dev` sin clave). Xion aún no eligió si va antes que el 1.
 
 ## Listo para hacer
 
@@ -70,8 +72,15 @@ Decidido y hecho el 2 nov 2026:
 
 Pendiente de Xion:
 
-- Revisar en GitHub si el repo tiene otras ramas, issues, Actions o forks.
 - Decidir si se quedan la rutina de jueves a sábado y el alias en `docs/SPEC.md` y `CLAUDE.md`.
+- Nombre de la app (propuesta 7 de "Por decidir"): siguen visibles `[NOMBRE]` en `src/app/manifest.ts:5-6` y `src/app/layout.tsx:24-26`. El paquete y el repo se llaman `topobreza4`.
+
+Otras recomendaciones de la revisión con opencode (2 nov 2026), sin aprobar:
+
+- CI en GitHub Actions con `pnpm lint`, `pnpm typecheck` y `pnpm test`.
+- Completar `package.json`: `description`, `repository` y `engines` (Node >= 20.9).
+- Firmar la cookie con un `SESSION_SECRET` aparte, en vez de con `APP_PASSCODE` (`src/server/auth.ts`).
+- Quitar `.claude/launch.json` del repo (opcional).
 
 Antes de desplegar: el login no limita intentos ni exige una clave mínima (`src/app/api/login/route.ts:9`), y sigue abierto el error 3 de "Listo para hacer". Mejoras que no bloquean: la sesión dura 1 año, no hay logout y faltan cabeceras CSP y HSTS.
 
