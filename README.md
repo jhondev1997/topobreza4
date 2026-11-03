@@ -8,6 +8,32 @@ App personal para avanzar proyectos con Claude Code: 2 proyectos activos, una en
 - Qué toca ahora: `docs/ESTADO.md`
 - Cómo se arma cada pedido: `docs/WORKFLOW.md`
 
+## Puesta en marcha
+
+Requisitos: Node.js 20.9 o superior y pnpm. Si no tienes pnpm, `corepack enable` instala la versión fijada en `package.json`.
+
+```bash
+pnpm install --frozen-lockfile
+cp .env.example .env
+pnpm db:push
+pnpm db:seed
+pnpm dev
+```
+
+La app queda en http://localhost:3000. Con el `.env` de ejemplo usa una base local (`local.db`), y el seed carga tres proyectos de ejemplo que puedes cambiar desde la app.
+
+Sin `APP_PASSCODE`, `pnpm dev` no pide clave a nadie, ni siquiera a otros equipos de tu red local. Si tu `.env` apunta a una base con datos reales, define una clave.
+
+Antes de dar un cambio por terminado:
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm test
+```
+
+`pnpm build` también necesita `DATABASE_URL`.
+
 ## Servidor MCP
 
 Claude Code lee el brief y deja su resumen con las herramientas de `mcp/server.ts`.
@@ -84,3 +110,7 @@ Fases originales, como referencia:
 | 4 — PWA y celular | `docs/fases/fase-4.md` | 1 |
 
 Desde la Fase 1, úsala para avanzar un proyecto real: así se valida de verdad.
+
+## Licencia
+
+MIT. Ver `LICENSE`.

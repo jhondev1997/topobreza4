@@ -66,6 +66,7 @@ Decidido y hecho el 2 nov 2026:
 - Licencia MIT (`LICENSE` y `package.json`).
 - Los nombres de proyectos reales se cambiaron por ejemplos genéricos (Recetario, Blog personal, Juego de cartas) en el seed, los tests, `docs/` y los diseños.
 - Se quitaron del repo los enlaces de claude.ai y el comentario personal de `docs/fases/ajuste-1.md`. `.mcp.json`, `.claude/settings.local.json` y `avance-mcp.json` quedaron en `.gitignore`.
+- `README.md` explica la puesta en marcha (comprobada en un clon limpio: install, `db:push`, `db:seed` y `pnpm dev` responden 200) y la licencia.
 
 Pendiente de Xion:
 
@@ -82,6 +83,7 @@ Antes de desplegar: el login no limita intentos ni exige una clave mínima (`src
 ## Restricciones vigentes
 
 - Los repos de los proyectos que se avanzan con la app no se modifican. Para usar el MCP en ellos sin tocarlos, ver "Servidor MCP" en `README.md`.
+- No se despliega en Vercel (decisión de Xion, 2 nov 2026). La sección "Despliegue" de `README.md` y `.vercelignore` siguen ahí hasta decidir el hosting.
 
 ## Ideas sueltas
 
