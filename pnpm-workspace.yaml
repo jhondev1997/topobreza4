@@ -1,0 +1,4 @@
+# Los scripts de instalación quedan bloqueados: estos paquetes funcionan sin ellos.
+allowBuilds:
+  esbuild: false
+  unrs-resolver: false

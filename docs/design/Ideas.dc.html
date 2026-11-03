@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Banca de ideas</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#C8F031;text-decoration:none}a:hover{color:#E1FF6B}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background-color: #0B0E14; background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 14px); font-family: 'Space Grotesk', system-ui, sans-serif; color: #E9ECF2; display: flex; flex-direction: column">
+  <header style="padding: 26px 20px 12px; display: flex; flex-direction: column; gap: 6px">
+    <span style="font-family: 'Chakra Petch', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; color: #C8F031">SE ANOTA, NO SE JUEGA</span>
+    <h1 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-size: 30px; font-weight: 700; line-height: 1; text-transform: uppercase">La banca</h1>
+  </header>
+
+  <main style="flex-grow: 1; padding: 4px 16px 16px; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+    <form style="display: flex; gap: 8px">
+      <label for="nueva" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Nueva idea</label>
+      <input id="nueva" type="text" placeholder="Anota la idea en una línea" style="flex-grow: 1; min-width: 0; box-sizing: border-box; min-height: 50px; border: 1px solid #3A4560; padding: 0 14px; font-family: inherit; font-size: 15px; background: #141925; color: #E9ECF2">
+      <button type="button" aria-label="Guardar idea" style="width: 50px; height: 50px; border: 0; background: #C8F031; display: flex; align-items: center; justify-content: center; clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B0E14" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+      </button>
+    </form>
+
+    <div style="display: flex; align-items: center; gap: 12px; border: 1px solid #263046; background: #141925; padding: 12px 14px">
+      <div style="display: flex; gap: 4px" aria-hidden="true">
+        <span style="width: 18px; height: 10px; background: #C8F031; transform: skewX(-20deg)"></span>
+        <span style="width: 18px; height: 10px; background: #C8F031; transform: skewX(-20deg)"></span>
+      </div>
+      <span style="font-size: 13px; line-height: 1.4; color: #B7BDCA"><strong style="color: #E9ECF2">Cupos 2/2.</strong> Para subir una idea, saca a un proyecto de la cancha.</span>
+    </div>
+
+    <section style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: #8B93A5">IDEAS (3)</h2>
+      <div style="display: flex; flex-direction: column; background: #141925; border: 1px solid #263046">
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #263046">
+          <span style="font-size: 15px; font-weight: 600; line-height: 1.4">Lista de compras a partir de las recetas</span>
+          <div style="display: flex; gap: 8px; align-items: center; font-size: 12px"><span style="color: #8B93A5">Recetario</span><span style="font-family: 'Chakra Petch', sans-serif; font-weight: 700; letter-spacing: 0.06em; color: #0B0E14; background: #FF8A3D; padding: 2px 8px">REVISAR HOY</span></div>
+        </div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #263046">
+          <span style="font-size: 15px; font-weight: 600; line-height: 1.4">Boletín por correo con las nuevas entradas</span>
+          <div style="display: flex; gap: 8px; align-items: center; font-size: 12px; color: #8B93A5"><span>Blog</span><span>· revisar 7 nov</span></div>
+        </div>
+        <div style="padding: 14px; display: flex; flex-direction: column; gap: 6px">
+          <span style="font-size: 15px; font-weight: 600; line-height: 1.4">[Idea suelta sin proyecto]</span>
+          <div style="display: flex; gap: 8px; align-items: center; font-size: 12px; color: #8B93A5"><span>Sin proyecto</span><span>· revisar 7 nov</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0; font-family: 'Chakra Petch', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: #8B93A5">PROYECTOS EN BANCA (1)</h2>
+      <div style="display: flex; justify-content: space-between; align-items: center; min-height: 52px; padding: 0 14px; border: 1px dashed #3A4560">
+        <span style="font-family: 'Chakra Petch', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase">Juego de cartas</span>
+        <span style="font-size: 12px; color: #8B93A5">desde el 30 oct</span>
+      </div>
+    </section>
+  </main>
+
+  <nav aria-label="Navegación principal" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #1E2536; background: #0E121A; padding: 6px 8px 22px">
+    <a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 48px; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: #8B93A5">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B93A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z"></path></svg>
+      INICIO
+    </a>
+    <a href="Ideas.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 48px; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #C8F031">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8F031" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"></path></svg>
+      IDEAS
+    </a>
+    <a href="Revision.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 48px; justify-content: center; font-family: 'Chakra Petch', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: #8B93A5">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B93A5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4M9 15l2 2 4-4"></path></svg>
+      REVISIÓN
+    </a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

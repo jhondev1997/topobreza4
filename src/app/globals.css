@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Tokens from docs/DESIGN.md */
+@theme inline {
+  --color-*: initial;
+
+  --color-bg: #0b0e14;
+  --color-bg-session: #070a0f;
+  --color-panel: #141925;
+  --color-panel-line: #263046;
+  --color-line-strong: #3a4560;
+  --color-check-empty: #4a5570;
+  --color-nav-bg: #0e121a;
+  --color-nav-line: #1e2536;
+  --color-text: #e9ecf2;
+  --color-text-2: #b7bdca;
+  --color-muted: #8b93a5;
+  --color-lime: #c8f031;
+  --color-lime-hover: #e1ff6b;
+  --color-lime-panel: #161d0c;
+  --color-lime-line: #44561a;
+  --color-ok: #7be495;
+  --color-ok-panel: #0d1a12;
+  --color-ok-line: #1f4a2c;
+  --color-warn: #ff8a3d;
+  --color-warn-text: #ffb07a;
+  --color-warn-panel: #1a1410;
+  --color-warn-line: #5a2e12;
+  --color-warn-track: #3a2416;
+  --color-warn-muted: #c9b7a8;
+
+  --font-display: var(--font-chakra-petch);
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.025) 0 1px,
+    transparent 1px 14px
+  );
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@utility bg-session-lines {
+  background-color: var(--color-bg-session);
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(200, 240, 49, 0.03) 0 1px,
+    transparent 1px 4px
+  );
+}
+
+/* clip-path also cuts the outline, so focus is drawn inside the element. */
+@utility focus-inset {
+  &:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-lime);
+  }
+}
+
+@utility focus-inset-dark {
+  &:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 3px var(--color-bg);
+  }
+}
+
+@utility clip-card {
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+
+@utility clip-button {
+  clip-path: polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+  );
+}
+
+@utility clip-chip {
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
